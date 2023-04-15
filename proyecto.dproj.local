@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2023/04/01 15:55:53.000.336,=C:\Users\darwin\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/04/01 15:56:30.000.069,C:\Users\darwin\Documents\Embarcadero\Studio\Projects\Unit1.pas=G:\pruebainf120\form.pas</Transaction>
+    <Transaction>2023/04/01 15:56:30.000.069,C:\Users\darwin\Documents\Embarcadero\Studio\Projects\Unit1.dfm=G:\pruebainf120\form.dfm</Transaction>
+    <Transaction>2023/04/01 15:56:44.000.452,C:\Users\darwin\Documents\Embarcadero\Studio\Projects\Project1.dproj=G:\pruebainf120\proyecto.dproj</Transaction>
+    <Transaction>2023/04/01 15:57:25.000.941,=G:\pruebainf120\Unit1.pas</Transaction>
+    <Transaction>2023/04/01 15:57:39.000.582,G:\pruebainf120\Unit1.pas=G:\pruebainf120\UCNatural.pas</Transaction>
+  </Transactions>
+</BorlandProject>
