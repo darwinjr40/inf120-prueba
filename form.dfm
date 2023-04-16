@@ -1,5 +1,5 @@
 object Form1: TForm1
-  Left = 0
+  Left = 55
   Top = 0
   Caption = 'Form1'
   ClientHeight = 462
@@ -12,6 +12,7 @@ object Form1: TForm1
   Font.Style = []
   Menu = MainMenu1
   OldCreateOrder = False
+  Position = poDesigned
   OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 13
@@ -86,6 +87,10 @@ object Form1: TForm1
       object OrdIzdToDerAsc1: TMenuItem
         Caption = 'OrdIzdToDerAsc'
         OnClick = OrdIzdToDerAsc1Click
+      end
+      object sacarprimerNumero1: TMenuItem
+        Caption = 'sacar primerNumero'
+        OnClick = sacarprimerNumero1Click
       end
     end
   end

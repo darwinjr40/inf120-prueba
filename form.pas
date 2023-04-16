@@ -20,6 +20,7 @@ type
     Edit3: TEdit;
     elimiarPosDig1: TMenuItem;
     OrdIzdToDerAsc1: TMenuItem;
+    sacarprimerNumero1: TMenuItem;
     procedure FormCreate(Sender: TObject);
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
@@ -28,6 +29,7 @@ type
     procedure posDigMenor1Click(Sender: TObject);
     procedure elimiarPosDig1Click(Sender: TObject);
     procedure OrdIzdToDerAsc1Click(Sender: TObject);
+    procedure sacarprimerNumero1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -101,6 +103,66 @@ end;
 procedure TForm1.posDigMenor1Click(Sender: TObject);
 begin
   Edit3.Text := IntToStr(objeto.GetDigito(2));
+end;
+
+
+
+function SacarPrimerNum(cad:String; var i : byte): String;
+const DIG = ['1','2','3','4','5','6','7','8','9', '0'];
+var num: String;
+    n: byte;
+    sw: Boolean;
+begin
+  num := '';
+  n := length(cad);
+  sw := false;
+  while ((i<=n)and not(cad[i] in DIG)) do
+  begin
+    if ((cad[i] = '-')) then
+    begin
+      sw := not sw;
+    end;
+    i := i + 1;
+
+  end;
+  while ((i<=n)and (cad[i] in DIG)) do
+  begin
+    num := num + cad[i]; //num := num + '5'
+    i := i + 1;
+  end;
+  if sw then
+    num := '-' + num;
+  result := num;
+end;
+
+procedure SUmarNumeros(cad:String);
+var i, n :byte;
+    num: string;
+    s : integer;
+begin
+  n := length(cad);
+  i := 1;
+  s := 0;
+  while (i <=n) do
+  begin
+    num := SacarPrimerNum(cad,i);
+    if (num <> '') then
+    begin
+     s := s + StrtoINt(num);
+    end;
+  end;
+  ShowMessage(inttostr(s));
+end;
+
+
+procedure TForm1.sacarprimerNumero1Click(Sender: TObject);
+var x: string;
+     i:byte;
+begin
+  x := edit1.Text;
+  i := 1;
+  SUmarNumeros(x);
+//  ShowMessage(SacarPrimerNum(x, i));
 end;
 
 end.
